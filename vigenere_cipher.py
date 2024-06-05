@@ -27,3 +27,15 @@ def translate_message(key: str, message: str, mode: str) -> str:
         else:
             translated.append(symbol)
     return "".join(translated)
+
+
+def main():
+    message = "Alan Mathison Turing was a British mathematician, logician, cryptanalyst, and computer scientist."
+    key = "ASIMOV"
+    mode = "Encrypt"
+    translated = translate_message(key, message, mode)
+    print(translated)
+
+
+if __name__ == "__main__":
+    main()
