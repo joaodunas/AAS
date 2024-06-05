@@ -33,8 +33,16 @@ class TestCfg(unittest.TestCase):
 
     def test_p6_1(self):
         ##((1, 2, 3, 4, 5, 6, 7, 8, 7, 9, 10, 9, 11, 12), 13, 12, 14)
-        array = [-1, 0, 1]
-        self.assertEqual(1, 1)
+        array = [-1, 0]
+        self.assertEqual(counting_sort.counting_sort(array), [-1, 0])
+
+    def test_p6_2(self):
+        array = [0, -1]
+        self.assertEqual(counting_sort.counting_sort(array), [-1, 0])
+
+    def test_p6_3(self):
+        array = [-1, 1, 0, 3, 5]
+        self.assertEqual(counting_sort.counting_sort(array), [-1, 0, 1, 3, 5])
 
 
 if __name__ == "__main__":
