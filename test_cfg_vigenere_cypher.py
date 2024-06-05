@@ -39,6 +39,6 @@ def test_P5_2():
     
 def test_P5_3():
     assert encrypt_message("RandomKey", "A?#$%&/(AKSNDA*`ª^ª  ASD AB A134)") == "R?#$%&/(AXVBPK*`ª^ª  EQU AO D134)"
-
+    
 if __name__ == "__main__":
     pytest.main()

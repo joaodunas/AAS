@@ -1,6 +1,38 @@
 LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 
+def main() -> None:
+    message = input("Enter message: ")
+    key = input("Enter key [alphanumeric]: ")
+    mode = input("Encrypt/Decrypt [e/d]: ")
+
+    if mode.lower().startswith("e"):
+        mode = "encrypt"
+        translated = encrypt_message(key, message)
+    elif mode.lower().startswith("d"):
+        mode = "decrypt"
+        translated = decrypt_message(key, message)
+
+    print(f"\n{mode.title()}ed message:")
+    print(translated)
+
+
+def encrypt_message(key: str, message: str) -> str:
+    """
+    >>> encrypt_message('HDarji', 'This is Harshil Darji from Dharmaj.')
+    'Akij ra Odrjqqs Gaisq muod Mphumrs.'
+    """
+    return translate_message(key, message, "encrypt")
+
+
+def decrypt_message(key: str, message: str) -> str:
+    """
+    >>> decrypt_message('HDarji', 'Akij ra Odrjqqs Gaisq muod Mphumrs.')
+    'This is Harshil Darji from Dharmaj.'
+    """
+    return translate_message(key, message, "decrypt")
+
+
 def translate_message(key: str, message: str, mode: str) -> str:
     translated = []
     key_index = 0
@@ -27,3 +59,7 @@ def translate_message(key: str, message: str, mode: str) -> str:
         else:
             translated.append(symbol)
     return "".join(translated)
+
+
+if __name__ == "__main__":
+    main()
