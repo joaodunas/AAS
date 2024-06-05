@@ -1,8 +1,6 @@
 import pytest
 from vigenere_cipher import encrypt_message, decrypt_message
 
-LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
 def test_P1():
     assert encrypt_message("RandomKey", "") == ""
 
