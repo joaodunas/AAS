@@ -1,6 +1,6 @@
 import pytest
 from vigenere_cipher import encrypt_message, decrypt_message
-
+    
 #----------------------Test Cases----------------------#
 #------------Message containing only letters-----------#
 
@@ -47,23 +47,23 @@ def test_12():
 #----------Message containing only non letters---------#
 
 def test_7():
-    assert encrypt_message("defghijklm", "1+2-3*4%#0") == "1+2-3*4%#"
+    assert encrypt_message("defghijklm", "1+2-3*4%#0") == "1+2-3*4%#0"
 
 def test_8():
-    assert decrypt_message("defghijklm", "1+2-3*4%#0") == "1+2-3*4%#"
+    assert decrypt_message("defghijklm", "1+2-3*4%#0") == "1+2-3*4%#0"
     
 def test_9():
-    assert encrypt_message("defghijklmn", "1+2-3*4%#0") == "1+2-3*4%#"
+    assert encrypt_message("defghijklmn", "1+2-3*4%#0") == "1+2-3*4%#0"
 
 def test_10():
-    assert decrypt_message("defghijklmn", "1+2-3*4%#0") == "1+2-3*4%#"
+    assert decrypt_message("defghijklmn", "1+2-3*4%#0") == "1+2-3*4%#0"
     
 def test_11():
-    assert encrypt_message("def", "1+2-3*4%#0") == "1+2-3*4%#"
+    assert encrypt_message("def", "1+2-3*4%#0") == "1+2-3*4%#0"
 
 def test_12():
-    assert decrypt_message("def", "1+2-3*4%#0") == "1+2-3*4%#"
+    assert decrypt_message("def", "1+2-3*4%#0") == "1+2-3*4%#0"
     
-
+    
 if __name__ == "__main__":
     pytest.main()
