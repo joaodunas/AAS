@@ -39,3 +39,11 @@ def counting_sort(arr):
         temp_arr[arr[i]] = temp_arr[arr[i]] - 1
 
     return result_arr
+
+
+def main():
+    print(counting_sort([-1]))
+
+
+if __name__ == "__main__":
+    main()
