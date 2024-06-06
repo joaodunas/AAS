@@ -1,4 +1,3 @@
-import pytest
 import unittest
 from vigenere_cipher import encrypt_message, decrypt_message
     
